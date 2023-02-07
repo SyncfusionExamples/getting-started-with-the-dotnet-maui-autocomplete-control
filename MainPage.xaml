@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiExample.MainPage"
+             xmlns:control="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             xmlns:local="clr-namespace:MauiExample">
+
+    <control:SfAutocomplete ItemsSource="{Binding SocialMedia}" HeightRequest="50"
+                            WidthRequest="250" DisplayMemberPath="Name"
+                            TextMemberPath="Name" Placeholder="Select a social media" 
+                            PlaceholderColor="Red" ClearButtonIconColor="Red" 
+                            Stroke="Red" TextSearchMode="Contains" 
+                            IsClearButtonVisible="False">
+        
+    </control:SfAutocomplete>
+
+    <ContentPage.BindingContext>
+        <local:DataViewModel></local:DataViewModel>
+    </ContentPage.BindingContext>
+    
+</ContentPage>
