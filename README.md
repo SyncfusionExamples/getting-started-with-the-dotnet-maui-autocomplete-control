@@ -28,6 +28,66 @@ SfAutocomplete autocomplete = new SfAutocomplete();
 Content = autocomplete;
 ```
 
+### Populating items using data binding
+
+**Step 1**: Create a model class named SocialMedia that contains information such as social media's ID and name. And generate the collection of social media data in the ViewModel class.
+
+```
+//Model.cs
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+//ViewModel.cs
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>();
+        this.SocialMedias.Add(new SocialMedia() { Name = "Facebook", ID = 0 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Google Plus", ID = 1 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Instagram", ID = 2 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "LinkedIn", ID = 3 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Skype", ID = 4 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Telegram", ID = 5 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Televzr", ID = 6 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Tik Tok", ID = 7 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Tout", ID = 8 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Tumblr", ID = 9 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Twitter", ID = 10 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Vimeo", ID = 11 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "WhatsApp", ID = 12 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "YouTube", ID = 13 });
+    }
+}
+```
+
+**Step 2**: Binding the SocialMedias property to the ItemsSource property of `AutoComplete`.
+
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             xmlns:local="clr-namespace:AutocompleteSample"             
+             x:Class="AutocompleteSample.MainPage">
+
+       <ContentPage.BindingContext>
+            <local:SocialMediaViewModel />
+       </ContentPage.BindingContext>
+
+       <ContentPage.Content>
+            <!--Setting ItemsSource-->
+            <editors:SfAutocomplete x:Name="autocomplete" 
+                                    WidthRequest="250"
+                                    ItemsSource="{Binding SocialMedias}" />
+        </ContentPage.Content>
+</ContentPage>
+```
+
 ## Project pre-requisites
 
 Make sure that you have the compatible versions of Visual Studio with .NET MAUI workloads and .NET SDK version in your machine before starting to work on this project. Refer to [System Requirements for .NET MAUI](https://help.syncfusion.com/maui/system-requirements).
