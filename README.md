@@ -110,7 +110,7 @@ Select a single item from the suggestion list based on the entered text.
 
 ## Placeholder
 
-Display hints using the placeholder text. This text will be displayed only if no items are selected or the edit text is empty.
+Display hints using the placeholder text. This text will be displayed only if no item is selected, or the edit text is empty.
 
 ## Data binding
 
