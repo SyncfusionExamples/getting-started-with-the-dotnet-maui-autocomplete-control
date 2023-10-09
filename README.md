@@ -1,6 +1,6 @@
 # Getting Started with the .NET MAUI Autocomplete Control
 
-The [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete?utm_source=github&utm_medium=listing&utm_campaign=maui-autocomplete-github-samples) control is highly optimized to load and populate suggestions quickly from large amounts of data depending on the user’s input characters. A quick start .NET MAUI project that shows how to create and configure the Syncfusion MAUI Autocomplete control to a .NET MAUI app. This project also includes a code snippet to populate the control’s data source, set a custom height and width to the control, customize placeholder text, change the filter type, and hide clear button.
+The [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete?utm_source=github&utm_medium=listing&utm_campaign=maui-autocomplete-github-samples) control is highly optimized to load and populate suggestions quickly from large amounts of data depending on the user’s input characters. This article shows how to create and configure the Syncfusion MAUI Autocomplete control. This project also includes a code snippet to populate the control’s data source, set a custom height and width to the control, customize placeholder text, change the filter type, and hide clear button.
 
 ### Adding the .NET MAUI AutoComplete
 Step 1: Add the NuGet to the project and add the namespace as shown in the following code sample:
@@ -115,6 +115,14 @@ Display hints using the placeholder text. This text will be displayed only if no
 ## Data binding
 
 Data-binding support works for all popular data sources and displays data based on the display member path. It automatically generates items from a data-bound collection. The application can be designed in the MVVM pattern.
+
+## Custom filter
+
+Apply your own filter logic to display custom filtered items. E.g., in the above image, AutoComplete filtered the cities based on country name.
+
+## Dropdown height
+
+Adjust the dropdown height based on the number of items to enhance readability without scrolling.
 
 ## Related Links
 
