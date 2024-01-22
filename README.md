@@ -104,23 +104,23 @@ Syncfusion has no liability for any damage or consequence that may arise by usin
 
 ## Features and Benefits
 
-## Selection
+### Selection
 
 Select a single item from the suggestion list based on the entered text.
 
-## Placeholder
+### Placeholder
 
 Display hints using the placeholder text. This text will be displayed only if no item is selected, or the edit text is empty.
 
-## Data binding
+### Data binding
 
 Data-binding support works for all popular data sources and displays data based on the display member path. It automatically generates items from a data-bound collection. The application can be designed in the MVVM pattern.
 
-## Custom filter
+### Custom filter
 
 Apply your own filter logic to display custom filtered items. E.g., in the above image, AutoComplete filtered the cities based on country name.
 
-## Dropdown height
+### Dropdown height
 
 Adjust the dropdown height based on the number of items to enhance readability without scrolling.
 
